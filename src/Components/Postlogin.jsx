@@ -94,7 +94,9 @@ const PostLoginNavbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={craftlogo} alt="craftlogo Logo" className="h-20 w-20" />
+            <div className="h-20 w-20 rounded-full border-2 border-[#d3756b] flex items-center justify-center bg-white">
+              <img src={craftlogo} alt="craftlogo Logo" className="h-16 w-16" />
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

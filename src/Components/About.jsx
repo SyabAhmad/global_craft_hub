@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import teanMember from "../assets/khalil.jpg";
+
 
 const AboutPage = () => {
   // Animation variants
@@ -194,7 +196,7 @@ Our mission is to create not just art, but lasting memories to be cherished for 
           <div className="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md">
             <div className="w-48 h-48 overflow-hidden rounded-lg flex-shrink-0">
               <img
-                src="khalil.jpg"
+                src={teanMember}
                 alt="Khalil Ur Rahman"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
