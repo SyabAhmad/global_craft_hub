@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles can go below this line */
+:root {
+  --color-primary: #d3756b;
+  --color-primary-dark: #c25d52;
+  --color-secondary: #e7dcca;
+  --color-secondary-dark: #d3c2a8;
+  --color-text-dark: #5e3023;
+  --color-text-medium: #8c5f53;
+  --color-background: #fff9f5;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Smooth scrolling for carousel */
+.carousel-container {
+  scroll-behavior: smooth;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* Custom utility classes */
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 rounded-full bg-[#d3756b] text-white hover:bg-[#c25d52] transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 rounded-full bg-[#e7dcca] text-[#5e3023] hover:bg-[#d3c2a8] transition-colors;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .carousel-scroll {
+    @apply flex gap-8 overflow-x-auto scrollbar-hide px-4 py-2;
+    scroll-behavior: smooth;
+  }
+}
