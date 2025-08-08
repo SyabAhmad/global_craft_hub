@@ -252,13 +252,13 @@ const ProductsPage = () => {
       <div className="max-w-7xl mx-auto mt-10">
         {/* Page Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-[#5e3023]">Sweet Delights</h1>
+          <h1 className="text-4xl font-bold text-[#5e3023]">Artful Treasures</h1>
           <p className="text-[#8c5f53] mt-2">
-            Browse our delicious bakery products
+            Browse our exquisite handcrafted art pieces
           </p>
           {totalProducts > 0 && (
             <p className="text-sm text-[#8c5f53] mt-1">
-              {totalProducts} products found
+              {totalProducts} Arts found
             </p>
           )}
         </div>
@@ -342,7 +342,7 @@ const ProductsPage = () => {
         {loading && (
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d3756b] mx-auto mb-4"></div>
-            <p className="text-[#8c5f53]">Loading delicious products...</p>
+            <p className="text-[#8c5f53]">Loading artistic creations....</p>
           </div>
         )}
 
@@ -380,7 +380,7 @@ const ProductsPage = () => {
               />
             </svg>
             <h3 className="text-xl font-semibold text-[#5e3023] mb-2">
-              No products found
+              No Arts found
             </h3>
             <p className="text-[#8c5f53] mb-4">
               {filters.search ||
@@ -578,7 +578,7 @@ const ProductsPage = () => {
             {/* Page Info */}
             <div className="ml-4 text-sm text-[#8c5f53] self-center">
               Page {currentPage} of {totalPages} ({totalProducts} total
-              products)
+              Arts)
             </div>
           </div>
         )}

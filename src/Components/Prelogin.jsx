@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import BakeHouse from "../assets/BakeHouse.png";
+import craftlogo from "../assets/craftlogo.jpg";
 
 const PreLoginNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +36,7 @@ const PreLoginNavbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={BakeHouse} alt="Bake House Logo" className="h-20 w-20" />
+            <img src={craftlogo} alt="craftlogo" className="h-20 w-20" />
           </Link>
           
           {/* Desktop Navigation */}
@@ -69,7 +69,7 @@ const PreLoginNavbar = () => {
               to="/login"
               className={`px-4 py-2 rounded-full ${
                 scrolled
-                  ? "bg-[#e7dcca] text-[#5e3023] hover:bg-[#d3c2a8]"
+                  ? "bg-[#e7dcca] text-[#8c7c68] hover:bg-[#d3c2a8]"
                   : "bg-[#e7dcca] text-[#5e3023] hover:bg-[#d3c2a8]"
               } transition-colors`}
             >
@@ -80,7 +80,7 @@ const PreLoginNavbar = () => {
               className={`px-4 py-2 rounded-full ${
                 scrolled
                   ? "bg-[#d3756b] text-white hover:bg-[#c25d52]"
-                  : "bg-[#d3756b] text-white hover:bg-[#c25d52]"
+                  : "bg-[#8c7c68] text-white hover:bg-[#c25d52]"
               } transition-colors`}
             >
               Sign Up

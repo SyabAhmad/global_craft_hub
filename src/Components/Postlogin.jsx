@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { addToCart, getCartCount } from "../utils/cartUtils";
-import BakeHouse from "../assets/BakeHouse.png";
+import craftlogo from "../assets/craftlogo.jpg";
 
 const PostLoginNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -94,7 +94,7 @@ const PostLoginNavbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src={BakeHouse} alt="Bake House Logo" className="h-20 w-20" />
+            <img src={craftlogo} alt="craftlogo Logo" className="h-20 w-20" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -109,7 +109,7 @@ const PostLoginNavbar = () => {
               to="/products"
               className="text-[#5e3023] hover:text-[#d3756b] transition-colors font-medium"
             >
-              Products
+              Arts
             </Link>
 
             {/* Customer-specific navigation items */}
@@ -231,7 +231,7 @@ const PostLoginNavbar = () => {
                   to="/manage-products"
                   className="text-[#5e3023] hover:text-[#d3756b] transition-colors font-medium"
                 >
-                  My Products
+                  My Arts
                 </Link>
                 <Link
                   to="/manage-orders"
@@ -342,7 +342,7 @@ const PostLoginNavbar = () => {
               className="block py-2 px-4 text-white hover:text-[#d3756b] font-medium"
               onClick={closeMenu}
             >
-              Products
+              Arts
             </Link>
 
             {/* Customer mobile menu items */}
@@ -433,7 +433,7 @@ const PostLoginNavbar = () => {
                   className="block py-2 px-4 text-white hover:text-[#d3756b] font-medium"
                   onClick={closeMenu}
                 >
-                  My Products
+                  My Arts
                 </Link>
                 <Link
                   to="/manage-orders"

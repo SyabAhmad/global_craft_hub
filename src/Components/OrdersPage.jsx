@@ -282,7 +282,7 @@ const OrdersPage = () => {
                 <p className="text-[#8c5f53] mt-1">Orders for {userStore.name}</p>
               )}
             </div>
-            <div className="text-sm text-[#8c5f53] bg-[#f5e6d3] px-4 py-2 rounded-lg">
+            <div className="text-sm text-white bg-[#8c7c68] px-4 py-2 rounded-lg">
               Total: {orders.length} orders
             </div>
           </div>
@@ -310,19 +310,19 @@ const OrdersPage = () => {
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse">
                   <thead>
-                    <tr className="bg-[#f5e6d3]">
-                      <th className="px-4 py-3 font-semibold text-[#5e3023]">Order ID</th>
+                    <tr className="bg-[#8c7c68] text-white">
+                      <th className="px-4 py-3 font-semibold text-white">Order ID</th>
                       {userRole === 'supplier' && (
-                        <th className="px-4 py-3 font-semibold text-[#5e3023]">Customer</th>
+                        <th className="px-4 py-3 font-semibold text-white">Customer</th>
                       )}
                       {userRole === 'customer' && (
-                        <th className="px-4 py-3 font-semibold text-[#5e3023]">Store</th>
+                        <th className="px-4 py-3 font-semibold text-white">Store</th>
                       )}
-                      <th className="px-4 py-3 font-semibold text-[#5e3023]">Date</th>
-                      <th className="px-4 py-3 font-semibold text-[#5e3023]">Total</th>
-                      <th className="px-4 py-3 font-semibold text-[#5e3023]">Status</th>
-                      <th className="px-4 py-3 font-semibold text-[#5e3023]">Payment</th>
-                      <th className="px-4 py-3 font-semibold text-[#5e3023]">Actions</th>
+                      <th className="px-4 py-3 font-semibold text-white">Date</th>
+                      <th className="px-4 py-3 font-semibold text-white">Total</th>
+                      <th className="px-4 py-3 font-semibold text-white">Status</th>
+                      <th className="px-4 py-3 font-semibold text-white">Payment</th>
+                      <th className="px-4 py-3 font-semibold text-white">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -379,7 +379,7 @@ const OrdersPage = () => {
                         <td className="px-4 py-3">
                           <button
                             onClick={() => openOrderDetails(order)}
-                            className="px-4 py-2 bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded-lg font-medium text-sm transition duration-200"
+                            className="px-4 py-2 bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded-lg font-medium text-sm transition duration-200"
                           >
                             View Details
                           </button>
@@ -499,7 +499,7 @@ const OrdersPage = () => {
                   <table className="w-full text-sm border-collapse border border-[#e7dcca]">
                     <thead>
                       <tr className="bg-[#f5e6d3]">
-                        <th className="border border-[#e7dcca] px-3 py-2 text-left">Product</th>
+                        <th className="border border-[#e7dcca] px-3 py-2 text-left">Art</th>
                         <th className="border border-[#e7dcca] px-3 py-2 text-center">Quantity</th>
                         <th className="border border-[#e7dcca] px-3 py-2 text-right">Unit Price</th>
                         <th className="border border-[#e7dcca] px-3 py-2 text-right">Total</th>

@@ -281,29 +281,101 @@ const Cart = () => {
         </div>
 
         {cartItems.length === 0 ? (
-          /* Empty Cart */
-          <div className="bg-white rounded-2xl shadow-lg p-12 text-center border border-[#e7dcca]">
-            <div className="mb-8">
+            /* Empty Cart with Animated Dustbin */
+            <div className="bg-white rounded-2xl shadow-lg p-12 text-center border border-[#e7dcca]">
+            <div className="mb-8 flex flex-col items-center">
+              {/* Animated Dustbin SVG */}
               <svg
-                className="w-24 h-24 text-[#e7dcca] mx-auto mb-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+              className="w-24 h-24 text-[#e7dcca] mx-auto mb-4"
+              viewBox="0 0 64 64"
+              fill="none"
               >
-                <path d="M7 4V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v2h4a1 1 0 0 1 0 2h-1v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V6H3a1 1 0 1 1 0-2h4zM6 6v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6H6zm8-2V3H8v1h6z"/>
+              {/* Bin body */}
+              <rect
+                x="16"
+                y="24"
+                width="32"
+                height="28"
+                rx="4"
+                fill="#e7dcca"
+                stroke="#8c7c68"
+                strokeWidth="2"
+                className="animate-[dustbin-body-bounce_1.2s_ease-in-out_infinite]"
+              />
+              {/* Bin lid */}
+              <rect
+                x="14"
+                y="16"
+                width="36"
+                height="10"
+                rx="3"
+                fill="#d3756b"
+                stroke="#8c7c68"
+                strokeWidth="2"
+                className="origin-[32px_21px] animate-[dustbin-lid-swing_1.2s_ease-in-out_infinite]"
+              />
+              {/* Handle */}
+              <rect
+                x="28"
+                y="10"
+                width="8"
+                height="8"
+                rx="2"
+                fill="#c25d52"
+                stroke="#8c7c68"
+                strokeWidth="1"
+                className="origin-[32px_14px] animate-[dustbin-handle-bounce_1.2s_ease-in-out_infinite]"
+              />
+              {/* Trash lines (falling) */}
+              <rect
+                x="31"
+                y="18"
+                width="2"
+                height="8"
+                rx="1"
+                fill="#c25d52"
+                className="animate-[dustbin-trash-fall_1.2s_ease-in-out_infinite]"
+              />
               </svg>
+              {/* Tailwind custom keyframes */}
+              <style>
+              {`
+                @keyframes dustbin-lid-swing {
+                0%, 100% { transform: rotate(-10deg); }
+                20% { transform: rotate(0deg);}
+                40% { transform: rotate(-15deg);}
+                60% { transform: rotate(-5deg);}
+                80% { transform: rotate(-12deg);}
+                }
+                @keyframes dustbin-body-bounce {
+                0%, 100% { transform: translateY(0);}
+                50% { transform: translateY(4px);}
+                }
+                @keyframes dustbin-handle-bounce {
+                0%, 100% { transform: translateY(0);}
+                50% { transform: translateY(-2px);}
+                }
+                @keyframes dustbin-trash-fall {
+                0%, 80%, 100% { opacity: 0; transform: translateY(0);}
+                10% { opacity: 1; transform: translateY(0);}
+                40% { opacity: 1; transform: translateY(16px);}
+                60% { opacity: 0; transform: translateY(24px);}
+                }
+              `}
+              </style>
               <h2 className="text-2xl font-bold text-[#5e3023] mb-2">Your cart is empty</h2>
               <p className="text-[#8c5f53] mb-6">
-                Looks like you haven't added any items to your cart yet.
+              Looks like you haven't added any items to your cart yet.
               </p>
             </div>
             <button
               onClick={() => navigate('/products')}
-              className="bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white px-8 py-3 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105"
             >
               Start Shopping
             </button>
-          </div>
-        ) : (
+            </div>
+          ) : (
           /* Cart with Items */
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Cart Items */}

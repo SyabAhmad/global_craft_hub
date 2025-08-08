@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import BakeHouseImage from '../assets/BakeHouse.png';
+// import BakeHouseImage from '../assets/BakeHouse.png';
 
 const StoreDetails = () => {
   const { storeId } = useParams();
@@ -94,7 +94,7 @@ const StoreDetails = () => {
       }
       return `http://localhost:5000/${product.image_url}`;
     }
-    return BakeHouseImage;
+    return None;
   };
 
   const formatPrice = (price) => {
@@ -171,7 +171,7 @@ const StoreDetails = () => {
           {/* Store Banner */}
           <div className="h-64 relative">
             <img
-              src={store.hero_image_url || BakeHouseImage}
+              src={store.hero_image_url}
               alt={store.name}
               className="w-full h-full object-cover"
             />

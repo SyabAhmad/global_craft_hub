@@ -398,7 +398,7 @@ const SignUpPage = () => {
                 <div>
                   <h4 className="text-sm font-medium text-[#5e3023] mb-1">Store Creation</h4>
                   <p className="text-sm text-[#8c5f53]">
-                    Your store will be created automatically when you register. You can update store details and add products after registration.
+                    Your store will be created automatically when you register. You can update store details and add Arts after registration.
                   </p>
                 </div>
               </div>

@@ -128,9 +128,9 @@ const StoreSettingsPage = () => {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          name: "My Bakery Store",
-          description: "Welcome to my bakery!",
-          address: "123 Bakery Street",
+          name: "My Arts Store",
+          description: "Welcome to my Arts Store!",
+          address: "123  Street",
           city: "Sweet City",
           phone: "555-0123"
         })
@@ -452,7 +452,7 @@ const StoreSettingsPage = () => {
               ) : (
                 <button
                   onClick={() => setIsEditing(true)}
-                  className="px-6 py-2 bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded font-semibold transition duration-200"
+                  className="px-6 py-2 bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded font-semibold transition duration-200"
                 >
                   Edit Settings
                 </button>

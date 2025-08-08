@@ -334,31 +334,57 @@ const Wishlist = () => {
           </div>
         )}
 
-        {/* Empty Wishlist */}
-        {!loading && !error && wishlistItems.length === 0 && (
-          <div className="text-center py-12 bg-white rounded-xl shadow-md border border-[#e7dcca]">
-            <div className="mb-6">
-              <svg className="mx-auto h-20 w-20 text-[#e7dcca]" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>
+        {/* /* Empty Wishlist */}
+          {!loading && !error && wishlistItems.length === 0 && (
+            <div className="text-center py-12 bg-white rounded-xl shadow-md border border-[#e7dcca]">
+              <div className="mb-6">
+                {/* Animated Heart SVG */}
+                <svg
+            className="mx-auto h-20 w-20 text-[#e7dcca] animate-pulse"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            style={{ filter: 'drop-shadow(0 2px 8px #e7dcca88)' }}
+                >
+            <g>
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                style={{
+                  transformOrigin: 'center',
+                  animation: 'heartbeat 1.2s infinite'
+                }}
+              />
+              <style>
+                {`
+                  @keyframes heartbeat {
+              0% { transform: scale(1);}
+              10% { transform: scale(1.08);}
+              20% { transform: scale(0.95);}
+              30% { transform: scale(1.05);}
+              40% { transform: scale(1);}
+              100% { transform: scale(1);}
+                  }
+                `}
+              </style>
+            </g>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-[#5e3023] mb-2">
+                Your wishlist is empty
+              </h3>
+              <p className="text-[#8c5f53] mb-6 max-w-md mx-auto">
+                Discover our stunning collection of artworks and creative pieces.
+                Save your favorites for later by clicking the heart icon on any item to add it to your wishlist.
+              </p>
+              <Link
+                to="/products"
+                className="inline-block bg-[#8c7c68] hover:bg-[#c25d52] text-white px-6 py-3 rounded-lg transition-colors"
+              >
+                🍰 Browse Arts
+              </Link>
             </div>
-            <h3 className="text-2xl font-semibold text-[#5e3023] mb-2">
-              Your wishlist is empty
-            </h3>
-            <p className="text-[#8c5f53] mb-6 max-w-md mx-auto">
-              Start exploring our delicious bakery products and save your favorites here. 
-              Click the heart icon on any product to add it to your wishlist.
-            </p>
-            <Link
-              to="/products"
-              className="inline-block bg-[#d3756b] hover:bg-[#c25d52] text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              🍰 Browse Products
-            </Link>
-          </div>
-        )}
+          )}
 
-        {/* Wishlist Items */}
+          {/* Wishlist Items */}
         {!loading && !error && wishlistItems.length > 0 && (
           <div className="space-y-4">
             {/* Temporary test button - remove after testing

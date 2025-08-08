@@ -202,16 +202,15 @@ const HomePage = () => {
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#5e3023] to-[#8c5f53] text-white py-16 px-4 pt-24">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4">Bake House</h1>
+          <h1 className="text-5xl font-bold mb-4">Global Craft Hub</h1>
           <p className="text-xl mb-8 opacity-90">
-            Discover the finest bakery products from local artisans
-          </p>
+Discover the finest handcrafted artworks from local artisans.          </p>
 
           {/* Main Search Bar */}
           <div className="max-w-2xl mx-auto relative">
             <input
               type="text"
-              placeholder="Search for cakes, pastries, or bakeries..."
+              placeholder="Search for arts..."
               value={filters.search}
               onChange={handleSearchChange}
               className="w-full px-6 py-4 rounded-full text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-[#d3756b] shadow-lg"
@@ -277,7 +276,7 @@ const HomePage = () => {
                 {/* Quick Stats */}
                 <div className="text-center p-4 bg-[#fff9f5] rounded-lg">
                   <h3 className="text-lg font-semibold text-[#5e3023] mb-2">
-                    Products Found
+                    Arts Found
                   </h3>
                   <p className="text-2xl font-bold text-[#d3756b]">
                     {totalProducts}
@@ -319,7 +318,7 @@ const HomePage = () => {
       onChange={handleFilterChange}
       className="w-full px-3 py-2 rounded-lg border border-[#e7dcca] focus:outline-none focus:ring-2 focus:ring-[#d3756b]"
     >
-      <option value="">All Bakeries</option>
+      <option value="">All Stores</option>
       {stores.map((store) => (
         <option key={store.store_id} value={store.store_id}>
           {store.name} {store.city && `(${store.city})`} 
@@ -424,7 +423,7 @@ const HomePage = () => {
             {loading && (
               <div className="text-center py-12">
                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d3756b] mx-auto mb-4"></div>
-                <p className="text-[#8c5f53]">Loading delicious products...</p>
+                <p className="text-[#8c5f53]">Loading artistic creations...</p>
               </div>
             )}
 
@@ -464,7 +463,7 @@ const HomePage = () => {
                   />
                 </svg>
                 <h3 className="text-xl font-semibold text-[#5e3023] mb-2">
-                  No products found
+                  No Arts found
                 </h3>
                 <p className="text-[#8c5f53] mb-4">
                   Try adjusting your search or filters to find what you're

@@ -235,7 +235,7 @@ const SupplierDashboard = () => {
                             </div>
                         </div>
                         <div className="hidden md:block">
-                            <div className="w-16 h-16 bg-gradient-to-br from-[#d3756b] to-[#c25d52] rounded-full flex items-center justify-center">
+                            <div className="w-16 h-16 bg-gradient-to-br from-[#8c7c68] to-[#8c7c68] rounded-full flex items-center justify-center">
                                 <span className="text-white text-2xl font-bold">
                                     {(storeInfo?.name || currentUser?.business_name || currentUser?.first_name || 'U').charAt(0).toUpperCase()
 }
@@ -282,7 +282,7 @@ const SupplierDashboard = () => {
                             </div>
                             <button 
                                 onClick={handleStoreSettings}
-                                className="w-full mt-4 bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white py-2 px-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                                className="w-full mt-4 bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white py-2 px-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                             >
                                 Manage Store
                             </button>
@@ -318,7 +318,7 @@ const SupplierDashboard = () => {
                             </div>
                             <button 
                                 onClick={handleManageOrders}
-                                className="w-full mt-4 bg-gradient-to-r from-[#e7dcca] to-[#d3c2a8] text-[#5e3023] py-2 px-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                                className="w-full mt-4 bg-gradient-to-r from-[#e7dcca] to-[#8c7c68] text-white py-2 px-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                             >
                                 Manage Orders
                             </button>
@@ -373,9 +373,9 @@ const SupplierDashboard = () => {
                             
                             <button 
                                 onClick={handleManageProducts}
-                                className="w-full mt-4 bg-gradient-to-r from-[#e7dcca] to-[#d3c2a8] text-[#5e3023] py-2 px-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+                                className="w-full mt-4 bg-gradient-to-r from-[#8c7c68] to-[#d3c2a8] text-white py-2 px-4 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
                             >
-                                Manage Products
+                                Manage Arts
                             </button>
                         </div>
                     </div>
@@ -390,17 +390,17 @@ const SupplierDashboard = () => {
                         Quick Actions
                     </h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        <button onClick={handleAddProduct} className="group bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white px-6 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+                        <button onClick={handleAddProduct} className="group bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white px-6 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                             <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clipRule="evenodd" />
                             </svg>
-                            Add New Product
+                            Add New Art
                         </button>
                         <button onClick={handleManageProducts} className="group bg-gradient-to-r from-[#e7dcca] to-[#d3c2a8] text-[#5e3023] px-6 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
                             <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clipRule="evenodd" />
                             </svg>
-                            View Products
+                            View Art
                         </button>
                         <button onClick={handleStoreSettings} className="group bg-gradient-to-r from-[#fff9f5] to-[#f5e6d3] text-[#5e3023] px-6 py-4 rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center border border-[#e7dcca]">
                             <svg className="w-5 h-5 mr-2 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20">

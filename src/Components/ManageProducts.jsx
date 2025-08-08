@@ -216,7 +216,7 @@ const ManageProducts = () => {
       <div className="min-h-screen bg-gradient-to-br from-[#fff9f5] to-[#f5e6d3] py-8 px-4 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d3756b] mx-auto mb-4"></div>
-          <p className="text-[#8c5f53]">Loading products...</p>
+          <p className="text-[#8c5f53]">Loading arts...</p>
         </div>
       </div>
     );
@@ -229,24 +229,24 @@ const ManageProducts = () => {
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-[#e7dcca] mt-16">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-4xl font-bold text-[#5e3023]">Manage Products</h1>
-              <p className="text-[#8c5f53] mt-2">Manage your store's product inventory</p>
+              <h1 className="text-4xl font-bold text-[#5e3023]">Manage Arts</h1>
+              <p className="text-[#8c5f53] mt-2">Manage your store's arts inventory</p>
             </div>
             <button
               onClick={() => navigate('/add-product')}
-              className="bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              className="bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
               </svg>
-              Add New Product
+              Add New Art
             </button>
           </div>
 
           {/* Filters */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <label className="block text-sm font-medium text-[#5e3023] mb-2">Search Products</label>
+              <label className="block text-sm font-medium text-[#5e3023] mb-2">Search Art</label>
               <input
                 type="text"
                 placeholder="Search by name or description..."
@@ -262,7 +262,7 @@ const ManageProducts = () => {
                 onChange={(e) => setStatusFilter(e.target.value)}
                 className="w-full px-4 py-2 border border-[#e7dcca] rounded-lg focus:ring-2 focus:ring-[#d3756b] focus:border-transparent"
               >
-                <option value="all">All Products</option>
+                <option value="all">All Art</option>
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
               </select>
@@ -291,7 +291,7 @@ const ManageProducts = () => {
                 <path fillRule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM6 9a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z" clipRule="evenodd" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold text-[#5e3023] mb-4">No Products Found</h2>
+            <h2 className="text-2xl font-bold text-[#5e3023] mb-4">No Art Found</h2>
             <p className="text-[#8c5f53] mb-6">
               {searchTerm || statusFilter !== 'all' 
                 ? 'No products match your current filters.' 
@@ -301,7 +301,7 @@ const ManageProducts = () => {
               onClick={() => navigate('/add-product')}
               className="bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              Add Your First Product
+              Add Your First Art
             </button>
           </div>
         ) : (

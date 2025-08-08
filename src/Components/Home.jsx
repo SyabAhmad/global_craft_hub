@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import BakeHouseImage from "../assets/BakeHouse.png";
+import craftlogo from "../assets/craftlogo.jpg";
+import craftheroimage from "../assets/craftlogo.jpg";
 
 const Home = () => {
   const [stores, setStores] = useState([]);
@@ -103,7 +104,7 @@ const Home = () => {
   };
 
   const getStoreImageUrl = (store) => {
-    return BakeHouseImage;
+    return craftlogo;
   };
 
   const formatPrice = (price) => {
@@ -114,17 +115,17 @@ const Home = () => {
     }).format(price).replace('PKR', 'Rs.');
   };
 
-  const handlePlayPause = (e) => {
-    e.stopPropagation();
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
+  // const handlePlayPause = (e) => {
+  //   e.stopPropagation();
+  //   if (videoRef.current) {
+  //     if (isPlaying) {
+  //       videoRef.current.pause();
+  //     } else {
+  //       videoRef.current.play();
+  //     }
+  //     setIsPlaying(!isPlaying);
+  //   }
+  // };
 
   const handlePrevProduct = () => {
     setCurrentProductIndex((prevIndex) => 
@@ -147,10 +148,11 @@ const Home = () => {
       {/* Hero section - Fixed responsive video */}
       {showVideo ? (
         <div className="relative mb-8 md:mb-12 shadow-lg overflow-hidden ">
-          <video
+          <img src={craftheroimage} alt="craftheroimage" />
+          {/* <video
             ref={videoRef}
             className="w-full h-[50vh] md:h-auto object-cover"
-            src="src\Video\HeroVideo.mp4"
+            src="src\craftlogo.jpg"
             autoPlay={true}
             muted={true}
             loop={true}
@@ -160,10 +162,10 @@ const Home = () => {
             onError={(e) => console.error("Video error:", e)}
           >
             Your browser does not support the video tag.
-          </video>
+          </video> */}
 
           {/* Play/Pause Button - Responsive */}
-          <button
+          {/* <button
             onClick={handlePlayPause}
             className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-16 md:h-16 rounded-full bg-black/30 backdrop-blur-sm hover:bg-black/50 flex items-center justify-center transition-all duration-300 z-10"
             aria-label={isPlaying ? "Pause video" : "Play video"}
@@ -205,22 +207,22 @@ const Home = () => {
                 />
               </svg>
             )}
-          </button>
+          </button> */}
 
           {/* Overlay Content - Responsive */}
           <div className="absolute inset-0 flex items-center justify-center px-4 mt-14">
             <div className="text-center bg-black/40 p-4 md:p-8 rounded-lg backdrop-blur-sm max-w-3xl w-full">
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-2 md:mb-4">
-                Welcome to Back House
+                Welcome to Global Craft Hub
               </h1>
               <p className="text-sm md:text-xl text-white mb-4 md:mb-6">
-                Crafting sweet memories, one cake at a time
+                Crafting timeless memories, one masterpiece at a time
               </p>
               <button
-                className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 transform hover:scale-105"
+                className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 transform hover:scale-105"
                 onClick={() => navigate("/products")}
               >
-                Explore Our Products
+                Discover Our Artworks
               </button>
             </div>
           </div>
@@ -229,10 +231,10 @@ const Home = () => {
         <div className="w-full h-[50vh] md:h-96 mb-8 md:mb-12 mx-4 md:mx-0 rounded-lg shadow-lg bg-[#f8e8e0] flex items-center justify-center relative">
           <div className="text-center p-4 md:p-8">
             <h1 className="text-2xl md:text-4xl font-bold text-[#5e3023] mb-2 md:mb-4">
-              Welcome to Back House
+              Welcome to Global Craft Hub
             </h1>
             <p className="text-sm md:text-xl text-[#8c5f53] mb-4 md:mb-6">
-              Crafting sweet memories, one cake at a time
+              Crafting timeless memories, one masterpiece at a time
             </p>
             <button
               className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300"
@@ -278,24 +280,20 @@ const Home = () => {
         <div className="flex items-center justify-center mb-6 md:mb-8">
           <div className="flex-grow border-t border-[#e7dcca] mr-4"></div>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#5e3023] uppercase">
-            Smiles Guaranteed
+            Inspiration Guaranteed
           </h2>
           <div className="flex-grow border-t border-[#e7dcca] ml-4"></div>
         </div>
         <p className="text-[#8c5f53] leading-relaxed text-sm md:text-lg">
-          Back House is your premier destination for exquisite baked goods and custom desserts. 
-          We pride ourselves on creating the finest cakes, pastries, and sweet treats using only the 
-          highest quality ingredients. Our skilled bakers craft each item with attention to detail and 
-          pure love, ensuring every bite is a memorable experience.
+           Global Craft Hub is your premier destination for unique and handcrafted art pieces.
+We pride ourselves on curating exquisite artworks, decor, and custom creations made with passion and precision. Our skilled artists pour their soul into every piece, using only high-quality materials to ensure each creation tells a story. At Global Craft Hub, every detail is intentional — every artwork, a memorable experience.
           <br />
           <br className="hidden md:block" />
-          From custom birthday cakes to elegant wedding desserts, from daily fresh pastries to 
-          special occasion treats, we have something to satisfy every sweet craving. Our commitment 
-          to freshness means we bake daily and never compromise on quality.
+          From custom portrait pieces to elegant wall art, from daily curated collections to special occasion gifts — we offer something to inspire every art lover.
+Our commitment to authenticity means every piece is crafted with care, creativity, and uncompromised quality.
           <br />
           <br className="hidden md:block" />
-          Visit our stores or browse our online selection to discover why Back House has 
-          become the trusted choice for celebrations and everyday indulgences.
+          Visit our studio or explore our online gallery to discover why Global Craft Hub has become the trusted choice for meaningful gifts and everyday inspiration.
         </p>
       </div>
 
@@ -304,7 +302,7 @@ const Home = () => {
         <div className="flex items-center justify-center mb-6 md:mb-8">
           <div className="flex-grow border-t border-[#e7dcca] mr-4"></div>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#5e3023] uppercase">
-            Featured Products
+            Featured Arts
           </h2>
           <div className="flex-grow border-t border-[#e7dcca] ml-4"></div>
         </div>
@@ -312,7 +310,7 @@ const Home = () => {
         {loading ? (
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d3756b] mx-auto mb-4"></div>
-            <p className="text-[#8c5f53]">Loading featured products...</p>
+            <p className="text-[#8c5f53]">Loading featured Arts...</p>
           </div>
         ) : featuredProducts.length > 0 ? (
           <div className="relative">
@@ -466,9 +464,9 @@ const Home = () => {
           </div>
         ) : (
           <div className="text-center py-12">
-            <p className="text-[#8c5f53] mb-4">No featured products available at the moment.</p>
+            <p className="text-[#8c5f53] mb-4">No featured Arts available at the moment.</p>
             <button
-              className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-6 py-3 rounded-lg font-medium transition-colors"
               onClick={() => navigate("/products")}
             >
               Browse All Products
@@ -514,7 +512,7 @@ const Home = () => {
                     
                     {/* Store badge overlay */}
                     <div className="absolute top-2 left-2">
-                      <span className="bg-[#d3756b] text-white text-xs px-2 py-1 rounded-full font-medium">
+                      <span className="bg-[#8c7c68] text-white text-xs px-2 py-1 rounded-full font-medium">
                         🏪 Top Store
                       </span>
                     </div>
@@ -534,7 +532,7 @@ const Home = () => {
                     
                     {/* Store stats */}
                     <div className="flex items-center justify-between text-sm text-[#8c5f53] mb-4">
-                      <span>📦 {store.product_count || 0} Products</span>
+                      <span>📦 {store.product_count || 0} Arts</span>
                       <span>⭐ {store.avg_rating ? parseFloat(store.avg_rating).toFixed(1) : '5.0'}</span>
                     </div>
                     
@@ -547,7 +545,7 @@ const Home = () => {
                     
                     <div className="mt-auto">
                       <button
-                        className="w-full bg-[#d3756b] hover:bg-[#c25d52] text-white py-2 md:py-3 rounded-md font-medium transition-colors text-sm md:text-base"
+                        className="w-full bg-[#8c7c68] hover:bg-[#c25d52] text-white py-2 md:py-3 rounded-md font-medium transition-colors text-sm md:text-base"
                         onClick={(e) => {
                           e.stopPropagation();
                           navigate(`/store/${store.store_id}`, { state: store });
@@ -564,10 +562,10 @@ const Home = () => {
             <div className="text-center py-12">
               <p className="text-[#8c5f53] mb-4">No stores available at the moment.</p>
               <button
-                className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-6 py-3 rounded-lg font-medium transition-colors"
+                className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-6 py-3 rounded-lg font-medium transition-colors"
                 onClick={() => navigate("/products")}
               >
-                Browse Products
+                Browse Arts
               </button>
             </div>
           )}
@@ -593,10 +591,7 @@ const Home = () => {
 
             <div className="relative">
               <p className="text-base md:text-xl text-[#8c5f53] italic mb-4 md:mb-6">
-                "I ordered a birthday cake for my daughter and it was absolutely
-                stunning! Not only did it look beautiful, but it tasted amazing
-                too. Back House has become our go-to bakery for all
-                celebrations."
+                "I ordered a custom art piece for my daughter’s birthday, and it was absolutely stunning! Not only was it beautifully crafted, but it truly captured her spirit. Global Craft Hub has become our go-to place for meaningful and artistic gifts."
               </p>
               <div className="flex items-center justify-center">
                 <img
@@ -629,14 +624,14 @@ const Home = () => {
           Ready to Order?
         </h2>
         <p className="text-[#8c5f53] text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
-          Make your celebration special with our delicious cakes and desserts.
-          Order now for pickup or delivery!
+           Make your moments unforgettable with our handcrafted art pieces.
+Order now for delivery or pickup from our studio!
         </p>
         <button
-          className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 transform hover:scale-105"
+          className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 transform hover:scale-105"
           onClick={() => navigate("/products")}
         >
-          Browse Our Products
+          Browse Our Arts
         </button>
       </div>
     </div>

@@ -426,7 +426,7 @@ const ProfilePage = () => {
               {!showPasswordForm ? (
                 <button
                   onClick={() => setShowPasswordForm(true)}
-                  className="px-6 py-2 bg-gray-600 text-white hover:bg-gray-700 rounded font-semibold transition duration-200"
+                  className="px-6 py-2 bg-[#8c7c68] text-white hover:bg-gray-700 rounded font-semibold transition duration-200"
                 >
                   Change Password
                 </button>
@@ -506,7 +506,7 @@ const ProfilePage = () => {
                   </button>
                   <button
                     onClick={handleSave}
-                    className="px-6 py-2 bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded font-semibold transition duration-200"
+                    className="px-6 py-2 bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded font-semibold transition duration-200"
                   >
                     Save Changes
                   </button>
@@ -514,7 +514,7 @@ const ProfilePage = () => {
               ) : (
                 <button
                   onClick={() => setIsEditing(true)}
-                  className="px-6 py-2 bg-gradient-to-r from-[#d3756b] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded font-semibold transition duration-200"
+                  className="px-6 py-2 bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white hover:from-[#c25d52] hover:to-[#b54842] rounded font-semibold transition duration-200"
                 >
                   Edit Profile
                 </button>

@@ -174,7 +174,7 @@ const ContactPage = () => {
                     <h4 className="font-semibold text-[#5e3023]">
                       Phone Number
                     </h4>
-                    <p className="text-[#8c5f53] mt-1">+92 345 1234567</p>
+                    <p className="text-[#8c5f53] mt-1">+92 344 9992551</p>
                     <p className="text-[#8c5f53]">Mon-Sat 9:00 AM - 8:00 PM</p>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ const ContactPage = () => {
                       Email Address
                     </h4>
                     <p className="text-[#8c5f53] mt-1">
-                      info@bakehouse.com
+                      info@crafthub.com
                     </p>
                     <p className="text-[#8c5f53]">We respond within 24 hours</p>
                   </div>
@@ -392,7 +392,7 @@ const ContactPage = () => {
                   </div>
                   <button
                     type="submit"
-                    className="w-full bg-[#d3756b] hover:bg-[#c25d52] text-white py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-[#8c7c68] hover:bg-[#c25d52] text-white py-3 rounded-lg font-bold transition-all duration-300 transform hover:scale-105"
                   >
                     SEND MESSAGE
                   </button>
@@ -468,7 +468,7 @@ const ContactPage = () => {
             <p className="text-[#8c5f53] mb-4">Still have questions?</p>
             <button
               onClick={openChat}
-              className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center"
+              className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

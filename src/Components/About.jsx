@@ -45,9 +45,8 @@ const AboutPage = () => {
             Our Mission & Values
           </h2>
           <p className="text-[#8c5f53] text-lg max-w-3xl mx-auto leading-relaxed">
-            At Bake House, we believe that every celebration deserves something
-            extraordinary. Our mission is to craft not just desserts, but
-            memories that will be cherished for years to come.
+            At Global Craft Hub, we believe every moment deserves something extraordinary.
+Our mission is to create not just art, but lasting memories to be cherished for a lifetime.
           </p>
         </div>
 
@@ -70,11 +69,10 @@ const AboutPage = () => {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-[#5e3023] mb-3">
-              Quality Ingredients
+              Crafted with Quality
             </h3>
             <p className="text-[#8c5f53]">
-              We source only the finest ingredients, ensuring each dessert is
-              not only beautiful but delicious.
+              We use only the finest materials, ensuring each piece is not just visually stunning but crafted to last.
             </p>
           </div>
 
@@ -99,8 +97,7 @@ const AboutPage = () => {
               Artisanal Craftsmanship
             </h3>
             <p className="text-[#8c5f53]">
-              Each cake is handcrafted with precision, creativity, and attention
-              to detail by our master bakers.
+              Each artwork is handcrafted with precision, creativity, and meticulous attention to detail by our skilled artists.
             </p>
           </div>
 
@@ -155,22 +152,19 @@ const AboutPage = () => {
               </h2>
               <div className="w-16 h-1 bg-[#d3756b] mb-6"></div>
               <p className="text-[#8c5f53] mb-4 leading-relaxed">
-                Bake House began as a small family bakery in Swat, Pakistan in
-                2010. What started as a passion project quickly blossomed into a
-                beloved local institution, known for creating the most delicious
-                and visually stunning cakes in the region.
+                Global Craft Hub began as a small family-run art studio in Swat, Pakistan in 2010. 
+  What started as a passion project soon blossomed into a beloved local space for creativity, 
+  known for offering the most captivating and handcrafted artworks in the region.
               </p>
               <p className="text-[#8c5f53] mb-4 leading-relaxed">
-                Over the years, we've expanded our offerings and locations, but
-                our commitment to quality and customer satisfaction has never
-                wavered. Each cake still receives the same love and attention to
-                detail as they did on day one.
+                Over the years, we've expanded our offerings and presence, but our commitment to quality and 
+  artistic integrity has never wavered. Each creation still receives the same care, precision, 
+  and soul as it did on day one.
               </p>
               <p className="text-[#8c5f53] leading-relaxed">
-                Today, we're proud to serve communities across Pakistan,
-                bringing our sweet creations to celebrations both big and small.
-                Our journey continues as we innovate and create new delights
-                while honoring the traditions that made us who we are.
+                Today, we are proud to serve communities across Pakistan, bringing our artful expressions 
+  into homes, events, and personal spaces — big and small. Our journey continues as we innovate, 
+  inspire, and honor the craftsmanship that made us who we are.
               </p>
             </div>
           </div>
@@ -191,7 +185,7 @@ const AboutPage = () => {
           </h2>
           <div className="w-24 h-1 bg-[#d3756b] mx-auto mb-6"></div>
           <p className="text-[#8c5f53] text-lg max-w-3xl mx-auto">
-            The passionate people behind our delicious creations
+            The passionate artists behind our handcrafted creations
           </p>
         </div>
 
@@ -200,20 +194,20 @@ const AboutPage = () => {
           <div className="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md">
             <div className="w-48 h-48 overflow-hidden rounded-lg flex-shrink-0">
               <img
-                src="https://images.unsplash.com/photo-1542380841-5eef57349ca1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGNvdmVyJTIwZmFjZSUyMHdpdGglMjBoaWphYiUyMGZnaXJscyUyMGltYWdlc3xlbnwwfHwwfHx8MA%3D%3D"
-                alt="Nida Bibi"
+                src="khalil.jpg"
+                alt="Khalil Ur Rahman"
                 className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-2xl font-bold text-[#5e3023] mb-2">
-                Nida Bibi
+                Khalil Ur Rahman
               </h3>
               <p className="text-[#8c5f53] mb-4">Full Stack Developer & Founder</p>
               <p className="text-[#8c5f53] mb-4">Department of Computer and Software Technology</p>
               <p className="text-[#8c5f53] mb-4">University of Swat</p>
               <div className="flex justify-center md:justify-start space-x-4">
-                <a href="#" className="text-[#d3756b] hover:text-[#c25d52]">
+                {/* <a href="#" className="text-[#d3756b] hover:text-[#c25d52]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -222,8 +216,8 @@ const AboutPage = () => {
                   >
                     <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z" />
                   </svg>
-                </a>
-                <a href="#" className="text-[#d3756b] hover:text-[#c25d52]">
+                </a> */}
+                <a href="https://www.linkedin.com/in/syedkhalil" className="text-[#d3756b] hover:text-[#c25d52]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -233,7 +227,7 @@ const AboutPage = () => {
                     <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 8c0 .557-.447 1.008-1 1.008s-1-.45-1-1.008c0-.557.447-1.008 1-1.008s1 .452 1 1.008zm0 2h-2v6h2v-6zm3 0h-2v6h2v-2.861c0-1.722 2.002-1.881 2.002 0v2.861h1.998v-3.359c0-3.284-3.128-3.164-4-1.548v-1.093z" />
                   </svg>
                 </a>
-                <a href="#" className="text-[#d3756b] hover:text-[#c25d52]">
+                <a href="https://www.facebook.com/syedkhalil" className="text-[#d3756b] hover:text-[#c25d52]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -248,7 +242,7 @@ const AboutPage = () => {
           </div>
 
           {/* Team Member 2 */}
-          <div className="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md">
+          {/* <div className="flex flex-col md:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-md">
             <div className="w-48 h-48 overflow-hidden rounded-lg flex-shrink-0">
               <img
                 src="https://images.unsplash.com/photo-1603638833522-0165d178cd5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTI2fHxjb3ZlciUyMGZhY2UlMjB3aXRoJTIwaGlqYWIlMjBmZ2lybHMlMjBpbWFnZXN8ZW58MHx8MHx8fDA%3D"
@@ -296,7 +290,7 @@ const AboutPage = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
 
@@ -321,13 +315,13 @@ const AboutPage = () => {
               {
                 name: "Amina Tahir",
                 quote:
-                  "The birthday cake they made for my daughter was beyond my expectations. Not only was it beautiful, but it tasted amazing too!",
+                  "The custom artwork they made for my daughter was beyond my expectations. Not only was it beautifully crafted, but it truly captured her personality too!",
                 location: "Islamabad",
               },
               {
                 name: "Imran Khalid",
                 quote:
-                  "I've ordered multiple times from Bake House and they never disappoint. Their attention to detail is impeccable.",
+                  "I've ordered multiple times from Global Craft Hub and they never disappoint. Their attention to detail is truly impeccable.",
                 location: "Lahore",
               },
               {
@@ -425,17 +419,16 @@ const AboutPage = () => {
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">
-            Ready to Create Sweet Memories?
+            Ready to Turn Moments into Masterpieces?
           </h2>
           <p className="text-lg mb-8 opacity-90">
-            Let us help you make your next celebration unforgettable with our
-            delicious creations.
+            Celebrate life’s moments with art that speaks from the heart.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button onClick={handleOrderNowButton} className="bg-white text-[#5e3023] hover:bg-gray-100 px-8 py-3 rounded-full font-bold transition-colors">
               Order Now
             </button>
-            <button onClick={handleContactUsButton} className="bg-[#d3756b] hover:bg-[#c25d52] text-white px-8 py-3 rounded-full font-bold transition-colors">
+            <button onClick={handleContactUsButton} className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-8 py-3 rounded-full font-bold transition-colors">
               Contact Us
             </button>
           </div>
