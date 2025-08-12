@@ -198,9 +198,9 @@ const HomePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fff9f5]">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#5e3023] to-[#8c5f53] text-white py-16 px-4 pt-24">
+      <div className="bg-gradient-to-r from-[#064232] to-[#8c5f53] text-white py-16 px-4 pt-24">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold mb-4">Global Craft Hub</h1>
           <p className="text-xl mb-8 opacity-90">
@@ -310,7 +310,7 @@ Discover the finest handcrafted artworks from local artisans.          </p>
 {stores.length > 0 && (
   <div>
     <h3 className="text-lg font-semibold text-[#5e3023] mb-3">
-      Bakeries ({stores.length})
+      Arts Store ({stores.length})
     </h3>
     <select
       name="store_id"

@@ -242,10 +242,10 @@ const ProductDetails = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-[#fff9f5]">
+      <div className="flex items-center justify-center min-h-screen bg-white">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d3756b] mx-auto mb-4"></div>
-          <p className="text-[#8c5f53] text-lg">Loading delicious product...</p>
+          <p className="text-[#064232] text-lg">Loading delicious product...</p>
         </div>
       </div>
     );
@@ -253,9 +253,9 @@ const ProductDetails = () => {
 
   if (error) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-[#fff9f5]">
+      <div className="flex items-center justify-center min-h-screen bg-white">
         <div className="text-center bg-white rounded-xl shadow-md border border-[#e7dcca] p-6 max-w-md">
-          <h3 className="text-xl font-semibold text-[#5e3023] mb-2">
+          <h3 className="text-xl font-semibold text-[#064232] mb-2">
             Oops! Something went wrong
           </h3>
           <p className="text-[#8c5f53] mb-4">{error}</p>
@@ -272,10 +272,10 @@ const ProductDetails = () => {
 
   if (!product) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-[#fff9f5]">
-        <div className="text-center bg-white rounded-xl shadow-md border border-[#e7dcca] p-6 max-w-md">
+      <div className="flex items-center justify-center min-h-screen bg-white">
+        <div className="text-center bg-white rounded-xl shadow-md border border-[#064232] p-6 max-w-md">
           <svg
-            className="mx-auto h-16 w-16 text-[#e7dcca] mb-4"
+            className="mx-auto h-16 w-16 text-[#064232] mb-4"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -285,10 +285,10 @@ const ProductDetails = () => {
               clipRule="evenodd"
             />
           </svg>
-          <h3 className="text-xl font-semibold text-[#5e3023] mb-2">
+          <h3 className="text-xl font-semibold text-[#064232] mb-2">
             Product not found
           </h3>
-          <p className="text-[#8c5f53]">
+          <p className="text-[#064232]">
             The product you're looking for doesn't exist or has been removed.
           </p>
         </div>
@@ -297,13 +297,13 @@ const ProductDetails = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#fff9f5] py-8 px-4">
+    <div className="min-h-screen bg-white py-8 px-4">
       <div className="container mx-auto max-w-6xl mt-16">
         <div className="bg-white rounded-2xl shadow-lg border border-[#e7dcca] overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
             {/* Product Image */}
             <div className="space-y-4">
-              <div className="aspect-square rounded-lg overflow-hidden bg-[#f8f9fa] border border-[#e7dcca]">
+              <div className="aspect-square rounded-lg overflow-hidden bg-[#f8f9fa] border border-[#064232]">
                 <img
                   src={getProductImageUrl(product)}
                   alt={product.name}
@@ -320,7 +320,7 @@ const ProductDetails = () => {
             <div className="space-y-6">
               {/* Header */}
               <div>
-                <h1 className="text-3xl font-bold text-[#5e3023] mb-2">
+                <h1 className="text-3xl font-bold text-[#064232] mb-2">
                   {product.name}
                 </h1>
                 <p className="text-[#8c5f53] text-lg leading-relaxed">
@@ -330,8 +330,8 @@ const ProductDetails = () => {
 
               {/* Product Details */}
               <div className="bg-[#fff9f5] rounded-lg p-4">
-                <h3 className="font-semibold text-[#5e3023] mb-2">Product Details</h3>
-                <ul className="text-[#8c5f53] space-y-1">
+                <h3 className="font-semibold text-[#064232] mb-2">Product Details</h3>
+                <ul className="text-[#064232] space-y-1">
                   <li>Category: {product.category_name || "Desserts"}</li>
                   <li>Store: {product.store_name || "Sweet Delights"}</li>
                   <li>
@@ -346,7 +346,7 @@ const ProductDetails = () => {
               <div className="flex items-center gap-3">
                 {product.sale_price ? (
                   <>
-                    <span className="text-2xl font-bold text-[#d3756b]">
+                    <span className="text-2xl font-bold text-[#064232]">
                       {formatPrice(product.sale_price)}
                     </span>
                     <span className="text-lg text-gray-500 line-through">
@@ -357,7 +357,7 @@ const ProductDetails = () => {
                     </span>
                   </>
                 ) : (
-                  <span className="text-2xl font-bold text-[#5e3023]">
+                  <span className="text-2xl font-bold text-[#064232]">
                     {formatPrice(product.price)}
                   </span>
                 )}
@@ -430,7 +430,7 @@ const ProductDetails = () => {
                     <div className="flex flex-col sm:flex-row gap-4">
                       <button
                         onClick={handleAddToCart}
-                        className="flex-1 bg-[#d3756b] text-white py-3 rounded-lg hover:bg-[#c25d52] transition-colors font-medium text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                        className="flex-1 bg-[#064232] text-white py-3 rounded-lg hover:bg-[#c25d52] transition-colors font-medium text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                         disabled={product.stock_quantity <= 0}
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -449,7 +449,7 @@ const ProductDetails = () => {
                     
                     <button
                       onClick={handleAddToWishlist}
-                      className="w-full bg-white text-[#d3756b] border-2 border-[#d3756b] py-3 rounded-lg hover:bg-[#d3756b] hover:text-white transition-colors font-medium text-sm sm:text-base flex items-center justify-center gap-2"
+                      className="w-full bg-[#064232] text-white border-2 border-[#d3756b] py-3 rounded-lg hover:bg-[#d3756b] hover:text-white transition-colors font-medium text-sm sm:text-base flex items-center justify-center gap-2"
                     >
                       <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>

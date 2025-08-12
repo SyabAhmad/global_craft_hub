@@ -236,7 +236,7 @@ const ProductsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fff9f5] py-12 px-4">
+    <div className="min-h-screen bg-white py-12 px-4">
       <ToastContainer 
         position="top-right"
         autoClose={3000}
@@ -252,12 +252,12 @@ const ProductsPage = () => {
       <div className="max-w-7xl mx-auto mt-10">
         {/* Page Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-[#5e3023]">Artful Treasures</h1>
-          <p className="text-[#8c5f53] mt-2">
+          <h1 className="text-4xl font-bold text-[#064232]">Artful Treasures</h1>
+          <p className="text-[#064232] mt-2">
             Browse our exquisite handcrafted art pieces
           </p>
           {totalProducts > 0 && (
-            <p className="text-sm text-[#8c5f53] mt-1">
+            <p className="text-sm text-[#064232] mt-1">
               {totalProducts} Arts found
             </p>
           )}
@@ -431,13 +431,13 @@ const ProductsPage = () => {
                 <div className="p-4">
                   <Link
                     to={`/product/${product.product_id}`}
-                    style={{ color: "#5e3023" }}
+                    style={{ color: "#064232" }}
                     className="hover:underline"
                   >
                     <h3 className="text-lg font-semibold mb-2">{product.name}</h3>
                   </Link>
 
-                  <p className="text-[#8c5f53] text-sm mb-3 line-clamp-2 flex-1">
+                  <p className="text-[#064232] text-sm mb-3 line-clamp-2 flex-1">
                     {product.description}
                   </p>
 
@@ -445,7 +445,7 @@ const ProductsPage = () => {
                   <div className="flex items-center justify-between mb-3">
                     {product.sale_price ? (
                       <div className="flex items-center space-x-2">
-                        <span className="text-lg font-bold text-[#d3756b]">
+                        <span className="text-lg font-bold text-[#064232]">
                           Rs. {product.sale_price}
                         </span>
                         <span className="text-sm text-gray-500 line-through">
@@ -453,7 +453,7 @@ const ProductsPage = () => {
                         </span>
                       </div>
                     ) : (
-                      <span className="text-lg font-bold text-[#5e3023]">
+                      <span className="text-lg font-bold text-[#064232]">
                         Rs. {product.price}
                       </span>
                     )}

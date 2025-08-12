@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import teanMember from "../assets/khalil.jpg";
+import about from "../assets/about.jpg";
+import ourj from "../assets/ourj.jpg";
 
 
 const AboutPage = () => {
@@ -17,12 +19,12 @@ const AboutPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#fff9f5]">
+    <div className="min-h-screen bg-[#064232]">
       {/* Hero Section */}
       <div className="relative h-96 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1501430654243-c934cec2e1c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-          alt="Bakery Kitchen"
+          src={about}
+          alt="Craft Hub"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
@@ -43,10 +45,10 @@ const AboutPage = () => {
         className="max-w-6xl mx-auto px-6 py-16"
       >
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#5e3023] mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Our Mission & Values
           </h2>
-          <p className="text-[#8c5f53] text-lg max-w-3xl mx-auto leading-relaxed">
+          <p className="text-white text-lg max-w-3xl mx-auto leading-relaxed">
             At Global Craft Hub, we believe every moment deserves something extraordinary.
 Our mission is to create not just art, but lasting memories to be cherished for a lifetime.
           </p>
@@ -143,27 +145,27 @@ Our mission is to create not just art, but lasting memories to be cherished for 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80"
+                src={ourj}
                 alt="Our Journey"
                 className="rounded-lg shadow-lg"
               />
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-[#5e3023] mb-6">
+              <h2 className="text-3xl font-bold text-white mb-6 text-[#064232]">
                 Our Journey
               </h2>
               <div className="w-16 h-1 bg-[#d3756b] mb-6"></div>
-              <p className="text-[#8c5f53] mb-4 leading-relaxed">
+              <p className="text-[#064232] mb-4 leading-relaxed">
                 Global Craft Hub began as a small family-run art studio in Swat, Pakistan in 2010. 
   What started as a passion project soon blossomed into a beloved local space for creativity, 
   known for offering the most captivating and handcrafted artworks in the region.
               </p>
-              <p className="text-[#8c5f53] mb-4 leading-relaxed">
+              <p className="text-[#064232] mb-4 leading-relaxed">
                 Over the years, we've expanded our offerings and presence, but our commitment to quality and 
   artistic integrity has never wavered. Each creation still receives the same care, precision, 
   and soul as it did on day one.
               </p>
-              <p className="text-[#8c5f53] leading-relaxed">
+              <p className="text-[#064232] leading-relaxed">
                 Today, we are proud to serve communities across Pakistan, bringing our artful expressions 
   into homes, events, and personal spaces — big and small. Our journey continues as we innovate, 
   inspire, and honor the craftsmanship that made us who we are.
@@ -182,11 +184,11 @@ Our mission is to create not just art, but lasting memories to be cherished for 
         className="max-w-6xl mx-auto px-6 py-16"
       >
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#5e3023] mb-3">
+          <h2 className="text-3xl font-bold text-white mb-3">
             Meet Our Team
           </h2>
           <div className="w-24 h-1 bg-[#d3756b] mx-auto mb-6"></div>
-          <p className="text-[#8c5f53] text-lg max-w-3xl mx-auto">
+          <p className="text-white text-lg max-w-3xl mx-auto">
             The passionate artists behind our handcrafted creations
           </p>
         </div>
@@ -306,7 +308,7 @@ Our mission is to create not just art, but lasting memories to be cherished for 
           className="max-w-6xl mx-auto px-6"
         >
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#5e3023] mb-3">
+            <h2 className="text-3xl font-bold text-[#064232] mb-3">
               What Our Customers Say
             </h2>
             <div className="w-24 h-1 bg-[#d3756b] mx-auto mb-6"></div>
@@ -329,7 +331,7 @@ Our mission is to create not just art, but lasting memories to be cherished for 
               {
                 name: "Saira Malik",
                 quote:
-                  "My wedding cake was the talk of the event! Bake House truly made our special day even more memorable.",
+                  "Absolutely beautiful piece! The craftsmanship, attention to detail, and quality exceeded my expectations. The colors are even more stunning in person, and it brings so much life to my space. Packaging was secure, delivery was quick, and the whole experience was perfect. I’ll definitely purchase again!",
                 location: "Karachi",
               },
             ].map((testimonial, index) => (
@@ -417,7 +419,7 @@ Our mission is to create not just art, but lasting memories to be cherished for 
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
-        className="bg-[#5e3023] text-white text-center py-16 px-6"
+        className="bg-[#064232] text-white text-center py-16 px-6"
       >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">

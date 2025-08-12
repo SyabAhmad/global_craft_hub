@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import craftlogo from "../assets/craftlogo.jpg";
-import craftheroimage from "../assets/craftlogo.jpg";
+import craftheroimage from "../assets/craftheroimage.jpg";
 
 const Home = () => {
   const [stores, setStores] = useState([]);
@@ -144,70 +144,16 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fff9f5] ">
+    <div className="min-h-screen bg-[#064232]">
       {/* Hero section - Fixed responsive video */}
       {showVideo ? (
-        <div className="relative mb-8 md:mb-12 shadow-lg overflow-hidden ">
-          <img src={craftheroimage} alt="craftheroimage" />
-          {/* <video
-            ref={videoRef}
-            className="w-full h-[50vh] md:h-auto object-cover"
-            src="src\craftlogo.jpg"
-            autoPlay={true}
-            muted={true}
-            loop={true}
-            playsInline={true}
-            controls={false}
-            preload="auto"
-            onError={(e) => console.error("Video error:", e)}
-          >
-            Your browser does not support the video tag.
-          </video> */}
+        <div className="relative mb-8 md:mb-12 shadow-lg overflow-hidden">
+          <img
+            src={craftheroimage}
+            alt="craftheroimage"
+            className="w-full h-[120vh]"
+          />
 
-          {/* Play/Pause Button - Responsive */}
-          {/* <button
-            onClick={handlePlayPause}
-            className="absolute bottom-4 right-4 md:bottom-8 md:right-8 w-12 h-12 md:w-16 md:h-16 rounded-full bg-black/30 backdrop-blur-sm hover:bg-black/50 flex items-center justify-center transition-all duration-300 z-10"
-            aria-label={isPlaying ? "Pause video" : "Play video"}
-          >
-            {isPlaying ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 md:h-8 md:w-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 md:h-8 md:w-8 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            )}
-          </button> */}
 
           {/* Overlay Content - Responsive */}
           <div className="absolute inset-0 flex items-center justify-center px-4 mt-14">
@@ -279,12 +225,12 @@ const Home = () => {
       <div className="text-center max-w-4xl mx-auto my-8 md:my-16 px-4">
         <div className="flex items-center justify-center mb-6 md:mb-8">
           <div className="flex-grow border-t border-[#e7dcca] mr-4"></div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#5e3023] uppercase">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase">
             Inspiration Guaranteed
           </h2>
           <div className="flex-grow border-t border-[#e7dcca] ml-4"></div>
         </div>
-        <p className="text-[#8c5f53] leading-relaxed text-sm md:text-lg">
+        <p className="text-white leading-relaxed text-sm md:text-lg">
            Global Craft Hub is your premier destination for unique and handcrafted art pieces.
 We pride ourselves on curating exquisite artworks, decor, and custom creations made with passion and precision. Our skilled artists pour their soul into every piece, using only high-quality materials to ensure each creation tells a story. At Global Craft Hub, every detail is intentional — every artwork, a memorable experience.
           <br />
@@ -301,7 +247,7 @@ Our commitment to authenticity means every piece is crafted with care, creativit
       <div className="max-w-7xl mx-auto mb-8 md:mb-16 px-4">
         <div className="flex items-center justify-center mb-6 md:mb-8">
           <div className="flex-grow border-t border-[#e7dcca] mr-4"></div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#5e3023] uppercase">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase">
             Featured Arts
           </h2>
           <div className="flex-grow border-t border-[#e7dcca] ml-4"></div>
@@ -310,7 +256,7 @@ Our commitment to authenticity means every piece is crafted with care, creativit
         {loading ? (
           <div className="text-center py-12">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#d3756b] mx-auto mb-4"></div>
-            <p className="text-[#8c5f53]">Loading featured Arts...</p>
+            <p className="text-white">Loading featured Arts...</p>
           </div>
         ) : featuredProducts.length > 0 ? (
           <div className="relative">
@@ -319,7 +265,7 @@ Our commitment to authenticity means every piece is crafted with care, creativit
               {/* Navigation Buttons - Hidden on mobile */}
               <button
                 onClick={handlePrevProduct}
-                className="hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-[#5e3023] rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
+                className="hidden md:block absolute left-2 top-1/2 transform -translate-y-1/2 z-10 bg-white/90 hover:bg-white text-white rounded-full p-3 shadow-lg transition-all duration-300 hover:scale-110"
                 aria-label="Previous product"
               >
                 <svg
@@ -479,7 +425,7 @@ Our commitment to authenticity means every piece is crafted with care, creativit
       <div className="text-center mb-8 md:mb-10 px-4">
         <div className="flex items-center justify-center mb-6 md:mb-8">
           <div className="flex-grow border-t border-[#e7dcca] mr-4"></div>
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-[#5e3023] uppercase">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white uppercase">
             Top Stores
           </h2>
           <div className="flex-grow border-t border-[#e7dcca] ml-4"></div>
@@ -620,15 +566,15 @@ Our commitment to authenticity means every piece is crafted with care, creativit
 
       {/* Call to Action - Responsive */}
       <div className="text-center mb-8 md:mb-16 px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#5e3023] mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           Ready to Order?
         </h2>
-        <p className="text-[#8c5f53] text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
+        <p className="text-white text-base md:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
            Make your moments unforgettable with our handcrafted art pieces.
 Order now for delivery or pickup from our studio!
         </p>
         <button
-          className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 transform hover:scale-105"
+          className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-6 py-3 pb-6 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all duration-300 transform hover:scale-105"
           onClick={() => navigate("/products")}
         >
           Browse Our Arts

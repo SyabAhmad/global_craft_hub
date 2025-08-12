@@ -3,20 +3,20 @@ import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#e7dcca] text-[#3b2a24] py-12 px-6">
+    <footer className="bg-[#064232] text-[#3b2a24] py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         {/* Logo and description */}
         <div className="col-span-1 md:col-span-4 text-center mb-8">
-          <h2 className="text-3xl font-bold text-[#5e3023] mb-3">Global Craft Hub</h2>
-          <p className="text-[#8c5f53] max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-3">Global Craft Hub</h2>
+          <p className="text-white max-w-2xl mx-auto">
             Bringing joy with every handcrafted masterpiece. Your trusted partner for meaningful moments.
           </p>
         </div>
 
         {/* Left Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-[#5e3023]">Quick Links</h3>
-          <ul className="space-y-3 text-[#8c5f53]">
+          <h3 className="text-xl font-bold mb-4 text-white">Quick Links</h3>
+          <ul className="space-y-3 text-white">
             <li className="hover:text-[#d3756b] cursor-pointer transition-colors">
               <a href="/">Home</a>
             </li>
@@ -37,8 +37,8 @@ const Footer = () => {
 
         {/* Middle Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-[#5e3023]">Policies</h3>
-          <ul className="space-y-3 text-[#8c5f53]">
+          <h3 className="text-xl font-bold mb-4 text-white">Policies</h3>
+          <ul className="space-y-3 text-white">
             <li className="hover:text-[#d3756b] cursor-pointer transition-colors">
               <a href="/about">FAQs</a>
             </li>
@@ -59,8 +59,8 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-[#5e3023]">Contact Us</h3>
-          <ul className="space-y-3 text-[#8c5f53]">
+          <h3 className="text-xl font-bold mb-4 text-white">Contact Us</h3>
+          <ul className="space-y-3 text-white">
             <li>
               <a
                 href="mailto:baketowninc@gmail.com"
@@ -92,10 +92,10 @@ const Footer = () => {
 
         {/* Newsletter */}
         <div>
-          <h3 className="text-xl font-bold mb-4 text-[#5e3023]">
+          <h3 className="text-xl font-bold mb-4 text-white">
             Stay Connected
           </h3>
-          <p className="mb-3 text-[#8c5f53]">
+          <p className="mb-3 text-white">
             Subscribe to receive updates on special offers and events
           </p>
           <input

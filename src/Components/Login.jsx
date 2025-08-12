@@ -107,18 +107,18 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fff9f5] py-16 px-4">
+    <div className="min-h-screen bg-white py-16 px-4">
       <ToastContainer position="top-right" />
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-        <div className="bg-[#e7dcca] p-6 text-center">
-          <h2 className="text-3xl font-bold text-[#5e3023]">Welcome Back</h2>
-          <p className="text-[#8c5f53] mt-2">Please login to your account</p>
+      <div className="max-w-md mx-auto bg-white rounded-xl border border-[#064232] shadow-md overflow-hidden">
+        <div className="bg-[#064232] p-6 text-center">
+          <h2 className="text-3xl font-bold text-white">Welcome Back</h2>
+          <p className="text-white mt-2">Please login to your account</p>
         </div>
 
         {!showForgotPassword ? (
           <form onSubmit={handleSubmit} className="p-8">
             <div className="mb-6">
-              <label htmlFor="email" className="block text-[#5e3023] font-medium mb-2">
+              <label htmlFor="email" className="block text-[#5e3023] font-medium mb-2 ">
                 Email Address
               </label>
               <input
@@ -128,7 +128,7 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-full border ${
-                  errors.email ? 'border-red-500' : 'border-[#e7dcca]'
+                  errors.email ? 'border-red-500' : 'border-[#064232]'
                 } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                 placeholder="Enter your email"
               />
@@ -148,7 +148,7 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-full border ${
-                  errors.password ? 'border-red-500' : 'border-[#e7dcca]'
+                  errors.password ? 'border-red-500' : 'border-[#064232]'
                 } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                 placeholder="Enter your password"
               />
@@ -183,7 +183,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className={`w-full bg-[#d3756b] hover:bg-[#c25d52] text-white py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
+              className={`w-full bg-[#064232] hover:bg-[#c25d52] text-white py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
                 isLoading ? 'opacity-70 cursor-not-allowed' : ''
               }`}
             >

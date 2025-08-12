@@ -223,18 +223,18 @@ const ManageProducts = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#fff9f5] to-[#f5e6d3] py-8 px-4">
+    <div className="min-h-screen bg-white py-8 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-[#e7dcca] mt-16">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-4xl font-bold text-[#5e3023]">Manage Arts</h1>
-              <p className="text-[#8c5f53] mt-2">Manage your store's arts inventory</p>
+              <h1 className="text-4xl font-bold text-[#064232]">Manage Arts</h1>
+              <p className="text-[#064232] mt-2">Manage your store's arts inventory</p>
             </div>
             <button
               onClick={() => navigate('/add-product')}
-              className="bg-gradient-to-r from-[#8c7c68] to-[#c25d52] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
+              className="bg-gradient-to-r from-[#064232] to-[#c25d52] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -286,7 +286,7 @@ const ManageProducts = () => {
         {/* Products Grid */}
         {filteredProducts.length === 0 ? (
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-[#e7dcca] text-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-[#d3756b] to-[#c25d52] rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 bg-gradient-to-br from-[#064232] to-[#c25d52] rounded-full flex items-center justify-center mx-auto mb-6">
               <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 2L3 7v11a1 1 0 001 1h12a1 1 0 001-1V7l-7-5zM6 9a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z" clipRule="evenodd" />
               </svg>
@@ -346,12 +346,12 @@ const ManageProducts = () => {
 
                 {/* Product Info */}
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-[#5e3023] mb-2 truncate">{product.name}</h3>
-                  <p className="text-[#8c5f53] text-sm mb-3 line-clamp-2">{product.description}</p>
+                  <h3 className="text-xl font-bold text-[#064232] mb-2 truncate">{product.name}</h3>
+                  <p className="text-[#064232] text-sm mb-3 line-clamp-2">{product.description}</p>
                   
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-2xl font-bold text-[#d3756b]">{formatCurrency(product.price)}</span>
-                    <span className="text-sm text-[#8c5f53]">Stock: {product.stock_quantity}</span>
+                    <span className="text-2xl font-bold text-[#064232]">{formatCurrency(product.price)}</span>
+                    <span className="text-sm text-[#064232]">Stock: {product.stock_quantity}</span>
                   </div>
 
                   {/* Rating */}
@@ -377,7 +377,7 @@ const ManageProducts = () => {
                   <div className="flex gap-2">
                     <Link
                       to={`/edit-product/${product.product_id}`}
-                      className="flex-1 bg-gradient-to-r from-[#e7dcca] to-[#d3c2a8] text-[#5e3023] py-2 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm text-center"
+                      className="flex-1 bg-[#064232] text-white py-2 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm text-center"
                     >
                       Edit
                     </Link>
@@ -385,7 +385,7 @@ const ManageProducts = () => {
                       onClick={() => handleStatusToggle(product.product_id, product.status)}
                       className={`flex-1 py-2 px-4 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 text-sm ${
                         product.status === 'active'
-                          ? 'bg-gradient-to-r from-amber-400 to-amber-500 text-white'
+                          ? 'bg-gradient-to-r from-red-400 to-red-500 text-white'
                           : 'bg-gradient-to-r from-green-400 to-green-500 text-white'
                       }`}
                     >
@@ -411,7 +411,7 @@ const ManageProducts = () => {
         <div className="mt-8 text-center">
           <button
             onClick={() => navigate('/supplier-dashboard')}
-            className="bg-gradient-to-r from-[#fff9f5] to-[#f5e6d3] text-[#5e3023] px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-[#e7dcca] flex items-center gap-2 mx-auto"
+            className="bg-[#064232] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-[#e7dcca] flex items-center gap-2 mx-auto"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />

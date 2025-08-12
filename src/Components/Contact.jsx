@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-
+import contactusimage from "../assets/contactus.jpg";
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -80,11 +80,11 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#fff9f5]">
+    <div className="min-h-screen bg-[#064232]">
       {/* Hero Section */}
       <div className="relative h-80 overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          src={contactusimage}
           alt="Contact Us"
           className="w-full h-full object-cover"
         />
@@ -100,10 +100,10 @@ const ContactPage = () => {
 
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-[#5e3023] mb-4">
+          <h2 className="text-3xl font-bold text-white mb-4">
             Get In Touch
           </h2>
-          <p className="text-[#8c5f53] text-lg max-w-3xl mx-auto">
+          <p className="text-white text-lg max-w-3xl mx-auto">
             Have questions about our products or services? We'd love to hear
             from you! Fill out the form below and we'll get back to you as soon
             as possible.
@@ -422,14 +422,14 @@ const ContactPage = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="bg-[#f8e8e0] py-16">
+      <div className="bg-[#064232] py-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-[#5e3023] mb-3">
+            <h2 className="text-3xl font-bold text-white mb-3">
               Frequently Asked Questions
             </h2>
             <div className="w-24 h-1 bg-[#d3756b] mx-auto mb-6"></div>
-            <p className="text-[#8c5f53]">
+            <p className="text-white">
               Find quick answers to common questions about our services
             </p>
           </div>
@@ -465,7 +465,7 @@ const ContactPage = () => {
             ))}
           </div>
           <div className="text-center mt-10">
-            <p className="text-[#8c5f53] mb-4">Still have questions?</p>
+            <p className="text-white mb-4">Still have questions?</p>
             <button
               onClick={openChat}
               className="bg-[#8c7c68] hover:bg-[#c25d52] text-white px-8 py-3 rounded-full font-bold transition-colors inline-flex items-center"

@@ -129,11 +129,11 @@ const SignUpPage = () => {
     <div className="min-h-screen bg-[#fff9f5] py-16 px-4">
       <ToastContainer position="top-right" />
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden">
-        <div className="bg-[#e7dcca] p-6 text-center">
-          <h2 className="text-3xl font-bold text-[#5e3023]">
+        <div className="bg-[#064232] p-6 text-center">
+          <h2 className="text-3xl font-bold text-white">
             Create Account
           </h2>
-          <p className="text-[#8c5f53] mt-2">
+          <p className="text-white mt-2">
             {role === "supplier" ? "Start your bakery business today" : "Join our sweet community today"}
           </p>
         </div>
@@ -144,7 +144,7 @@ const SignUpPage = () => {
             type="button"
             className={`px-6 py-2 rounded-full transition-all duration-200 ${
               role === "customer"
-                ? "bg-[#d3756b] text-white shadow-md"
+                ? "bg-[#064232] text-white shadow-md"
                 : "bg-gray-200 text-[#5e3023] hover:bg-gray-300"
             }`}
             onClick={() => setRole("customer")}
@@ -155,7 +155,7 @@ const SignUpPage = () => {
             type="button"
             className={`px-6 py-2 rounded-full transition-all duration-200 ${
               role === "supplier"
-                ? "bg-[#d3756b] text-white shadow-md"
+                ? "bg-[#064232] text-white shadow-md"
                 : "bg-gray-200 text-[#5e3023] hover:bg-gray-300"
             }`}
             onClick={() => setRole("supplier")}
@@ -178,7 +178,7 @@ const SignUpPage = () => {
                 value={formData.first_name}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-full border ${
-                  errors.first_name ? 'border-red-500' : 'border-[#e7dcca]'
+                  errors.first_name ? 'border-red-500' : 'border-[#064232]'
                 } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                 placeholder="First Name"
               />
@@ -197,7 +197,7 @@ const SignUpPage = () => {
                 value={formData.last_name}
                 onChange={handleChange}
                 className={`w-full px-4 py-3 rounded-full border ${
-                  errors.last_name ? 'border-red-500' : 'border-[#e7dcca]'
+                  errors.last_name ? 'border-red-500' : 'border-[#064232]'
                 } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                 placeholder="Last Name"
               />
@@ -220,7 +220,7 @@ const SignUpPage = () => {
                   value={formData.business_name}
                   onChange={handleChange}
                   className={`w-full px-4 py-3 rounded-full border ${
-                    errors.business_name ? 'border-red-500' : 'border-[#e7dcca]'
+                    errors.business_name ? 'border-red-500' : 'border-[#064232]'
                   } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                   placeholder="e.g., Sweet Delights Bakery"
                 />
@@ -240,7 +240,7 @@ const SignUpPage = () => {
                   value={formData.business_address}
                   onChange={handleChange}
                   className={`w-full px-4 py-3 rounded-full border ${
-                    errors.business_address ? 'border-red-500' : 'border-[#e7dcca]'
+                    errors.business_address ? 'border-red-500' : 'border-[#064232]'
                   } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                   placeholder="Complete store address"
                 />
@@ -261,7 +261,7 @@ const SignUpPage = () => {
                     value={formData.city}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-full border ${
-                      errors.city ? 'border-red-500' : 'border-[#e7dcca]'
+                      errors.city ? 'border-red-500' : 'border-[#064232]'
                     } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                     placeholder="City"
                   />
@@ -280,7 +280,7 @@ const SignUpPage = () => {
                     value={formData.business_phone}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 rounded-full border ${
-                      errors.business_phone ? 'border-red-500' : 'border-[#e7dcca]'
+                      errors.business_phone ? 'border-red-500' : 'border-[#064232]'
                     } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
                     placeholder="Contact number"
                   />
@@ -300,7 +300,7 @@ const SignUpPage = () => {
                   value={formData.store_description}
                   onChange={handleChange}
                   rows={3}
-                  className="w-full px-4 py-3 rounded-lg border border-[#e7dcca] focus:outline-none focus:ring-2 focus:ring-[#d3756b] resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-[#064232] focus:outline-none focus:ring-2 focus:ring-[#d3756b] resize-none"
                   placeholder="Describe your bakery and specialties..."
                 />
               </div>
@@ -318,7 +318,7 @@ const SignUpPage = () => {
               value={formData.email}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-full border ${
-                errors.email ? 'border-red-500' : 'border-[#e7dcca]'
+                errors.email ? 'border-red-500' : 'border-[#064232]'
               } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
               placeholder="Enter your email"
             />
@@ -338,7 +338,7 @@ const SignUpPage = () => {
               value={formData.password}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-full border ${
-                errors.password ? 'border-red-500' : 'border-[#e7dcca]'
+                errors.password ? 'border-red-500' : 'border-[#064232]'
               } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
               placeholder="Create a password"
             />
@@ -358,7 +358,7 @@ const SignUpPage = () => {
               value={formData.confirmPassword}
               onChange={handleChange}
               className={`w-full px-4 py-3 rounded-full border ${
-                errors.confirmPassword ? 'border-red-500' : 'border-[#e7dcca]'
+                errors.confirmPassword ? 'border-red-500' : 'border-[#064232]'
               } focus:outline-none focus:ring-2 focus:ring-[#d3756b]`}
               placeholder="Confirm your password"
             />
@@ -408,7 +408,7 @@ const SignUpPage = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className={`w-full bg-[#d3756b] hover:bg-[#c25d52] text-white py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
+            className={`w-full bg-[#064232] hover:bg-[#c25d52] text-white py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 ${
               isLoading ? 'opacity-70 cursor-not-allowed' : ''
             }`}
           >
