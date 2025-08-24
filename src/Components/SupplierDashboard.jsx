@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { analyticsService } from '../services/api';
 
 // Supplier dashboard component
 const SupplierDashboard = () => {
@@ -27,6 +28,7 @@ const SupplierDashboard = () => {
       orders_today: 0
     });
     const [storeInfo, setStoreInfo] = useState(null);
+  const [analytics, setAnalytics] = useState({ views: 0, clicks: 0, add_to_cart: 0, purchases: 0 });
     
     // Show loading if not authenticated or user data not loaded
     if (!isAuthenticated || !currentUser) {
@@ -104,6 +106,12 @@ const SupplierDashboard = () => {
               setOrderStats(orderData.stats);
             }
           }
+
+          // Fetch analytics rollup
+          try {
+            const a = await analyticsService.getSupplierOverview();
+            if (a.success) setAnalytics(a.analytics || analytics);
+          } catch (e) { /* ignore */ }
         } catch (err) {
           console.error("Error fetching stats:", err);
         }
@@ -441,7 +449,7 @@ const SupplierDashboard = () => {
 
                     {/* Quick Stats */}
                     <div className="bg-white rounded-2xl shadow-lg p-6 border border-[#e7dcca]">
-                        <h3 className="text-xl font-bold text-[#064232] mb-4">Quick Stats</h3>
+            <h3 className="text-xl font-bold text-[#064232] mb-4">Quick Stats</h3>
                         <div className="grid grid-cols-2 gap-4">
                             <div className="text-center p-4 bg-[#fff9f5] rounded-lg">
                                 <div className="text-2xl font-bold text-[#d3756b]">{orderStats.orders_today}</div>
@@ -459,6 +467,14 @@ const SupplierDashboard = () => {
                                 <div className="text-2xl font-bold text-red-500">{productStats.out_of_stock}</div>
                                 <div className="text-sm text-[#064232]">Out of Stock</div>
                             </div>
+              <div className="text-center p-4 bg-[#fff9f5] rounded-lg">
+                <div className="text-2xl font-bold text-[#5e3023]">{analytics.views}</div>
+                <div className="text-sm text-[#064232]">Views (30d)</div>
+              </div>
+              <div className="text-center p-4 bg-[#fff9f5] rounded-lg">
+                <div className="text-2xl font-bold text-[#5e3023]">{analytics.clicks}</div>
+                <div className="text-sm text-[#064232]">Clicks (30d)</div>
+              </div>
                         </div>
                     </div>
                 </div>

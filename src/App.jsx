@@ -30,6 +30,8 @@ import Wishlist from "./Components/WishList";
 import Cart from "./Components/Cart";
 import ManageProducts from "./Components/ManageProducts";
 import EditProduct from "./Components/EditProduct";
+import AdminDashboard from "./Components/AdminDashboard";
+import AdminProducts from "./Components/AdminProducts";
 
 // Protected Route Component
 const ProtectedRoute = ({ children, allowedRoles = [] }) => {
@@ -189,6 +191,22 @@ const AppRoutes = () => {
           element={
             <ProtectedRoute allowedRoles={["supplier"]}>
               <StoreCreationPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/products"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AdminProducts />
             </ProtectedRoute>
           }
         />

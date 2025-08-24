@@ -114,21 +114,29 @@ def deactivate_account():
 @role_required('admin')
 def get_all_users():
     """Get all users (admin only)"""
-    # Implement pagination
     page = request.args.get('page', 1, type=int)
     limit = request.args.get('limit', 10, type=int)
-    
-    # TODO: Implement get_all method in User model
-    # users, total = User.get_all(page, limit)
-    
+    offset = (page - 1) * limit
+
+    with get_cursor() as cursor:
+        cursor.execute("SELECT COUNT(*) AS total FROM users")
+        total = cursor.fetchone()['total']
+        cursor.execute(
+            """
+            SELECT user_id, email, first_name, last_name, role, is_active, date_joined, last_login
+            FROM users ORDER BY date_joined DESC LIMIT %s OFFSET %s
+            """,
+            (limit, offset)
+        )
+        users = cursor.fetchall()
+
     return jsonify({
         'success': True,
-        'message': 'Admin only endpoint - Get all users'
-        # 'users': users,
-        # 'pagination': {
-        #     'total': total,
-        #     'page': page,
-        #     'limit': limit,
-        #     'pages': (total + limit - 1) // limit
-        # }
+        'users': users,
+        'pagination': {
+            'total': total,
+            'page': page,
+            'limit': limit,
+            'pages': (total + limit - 1) // limit
+        }
     }), 200

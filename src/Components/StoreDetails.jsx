@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { analyticsService } from '../services/api';
 // import BakeHouseImage from '../assets/BakeHouse.png';
 
 const StoreDetails = () => {
@@ -16,6 +17,8 @@ const StoreDetails = () => {
     if (storeId) {
       fetchStoreDetails();
       fetchStoreProducts();
+  // track store view
+  analyticsService.trackEvent({ event_type: 'view', store_id: storeId });
     } else {
       console.error('No storeId provided');
       setError('No store ID provided');
@@ -94,7 +97,7 @@ const StoreDetails = () => {
       }
       return `http://localhost:5000/${product.image_url}`;
     }
-    return None;
+  return null;
   };
 
   const formatPrice = (price) => {
@@ -303,6 +306,7 @@ const StoreDetails = () => {
                     className="w-full bg-[#d3756b] hover:bg-[#c25d52] text-white py-2 rounded-lg transition-colors"
                     onClick={(e) => {
                       e.stopPropagation();
+                      analyticsService.trackEvent({ event_type: 'click', store_id: storeId, product_id: product.product_id });
                       navigate(`/product/${product.product_id}`);
                     }}
                   >

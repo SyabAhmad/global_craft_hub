@@ -175,3 +175,28 @@ export const storeService = {
 };
 
 export default apiClient;
+
+// Analytics Services
+export const analyticsService = {
+  // Admin overview
+  getAdminOverview: async () => {
+    const res = await apiClient.get('/analytics/admin/overview');
+    return res.data;
+  },
+
+  // Supplier overview
+  getSupplierOverview: async () => {
+    const res = await apiClient.get('/analytics/supplier/overview');
+    return res.data;
+  },
+
+  // Track event (anonymous allowed)
+  trackEvent: async (payload) => {
+    try {
+      await apiClient.post('/analytics/track', payload);
+    } catch (e) {
+      // swallow errors to not break UX
+      console.debug('trackEvent failed', e);
+    }
+  }
+};

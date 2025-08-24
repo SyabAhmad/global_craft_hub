@@ -81,6 +81,7 @@ const PostLoginNavbar = () => {
   // Determine if user is a customer or supplier
   const isCustomer = currentUser?.role === "customer";
   const isSupplier = currentUser?.role === "supplier";
+  const isAdmin = currentUser?.role === "admin";
 
   return (
     <nav
@@ -296,6 +297,24 @@ const PostLoginNavbar = () => {
                 </div>
               </>
             )}
+
+            {/* Admin navigation */}
+            {isAdmin && (
+              <>
+                <Link
+                  to="/admin"
+                  className="text-[#5e3023] hover:text-[#d3756b] transition-colors font-medium"
+                >
+                  Admin
+                </Link>
+                <button
+                  onClick={handleLogout}
+                  className="text-[#5e3023] hover:text-[#d3756b] transition-colors font-medium"
+                >
+                  Logout
+                </button>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -478,6 +497,28 @@ const PostLoginNavbar = () => {
                     setIsMenuOpen(false);
                   }}
                   className="block w-full bg-red-500 text-left py-2 px-4 text-white hover:text-[#d3756b] font-medium"
+                >
+                  Logout
+                </button>
+              </>
+            )}
+
+            {/* Admin mobile menu */}
+            {isAdmin && (
+              <>
+                <Link
+                  to="/admin"
+                  className="block py-2 px-4 text-white hover:text-[#d3756b] font-medium"
+                  onClick={closeMenu}
+                >
+                  Admin
+                </Link>
+                <button
+                  onClick={() => {
+                    handleLogout();
+                    setIsMenuOpen(false);
+                  }}
+                  className="block w-full text-left py-2 px-4 text-white hover:text-[#d3756b] font-medium"
                 >
                   Logout
                 </button>

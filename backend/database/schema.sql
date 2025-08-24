@@ -187,6 +187,22 @@ CREATE TABLE wishlist_items (
     FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
 );
 
+-- Analytics events for tracking views, clicks, and actions
+CREATE TYPE analytics_event_type AS ENUM ('view', 'click', 'add_to_cart', 'purchase');
+
+CREATE TABLE IF NOT EXISTS analytics_events (
+    event_id VARCHAR(36) PRIMARY KEY,
+    user_id VARCHAR(36), -- nullable for anonymous
+    store_id VARCHAR(36),
+    product_id VARCHAR(36),
+    event_type analytics_event_type NOT NULL,
+    metadata JSONB,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE SET NULL,
+    FOREIGN KEY (store_id) REFERENCES stores(store_id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
+);
+
 
 INSERT INTO categories (category_id, name, description) VALUES 
 ('cat1', 'Cakes', 'Traditional and custom cakes'),

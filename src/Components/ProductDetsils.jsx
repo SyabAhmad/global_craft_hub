@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { cartService } from "../services/cartService";
+import { analyticsService } from "../services/api";
 import { toast } from 'react-toastify';
 import OwnStoreModal from './OwnStoreModal';
 
@@ -51,6 +52,8 @@ const ProductDetails = () => {
           console.log("Raw image_url:", data.product.image_url);
           console.log("Processed image URL:", getProductImageUrl(data.product));
           setProduct(data.product);
+          // track product view
+          analyticsService.trackEvent({ event_type: 'view', store_id: data.product.store_id, product_id: data.product.product_id });
         } else {
           throw new Error(data.message || "Product not found");
         }
@@ -132,6 +135,7 @@ const ProductDetails = () => {
       
       // Use the cart service
       const response = await cartService.addToCart(product.product_id, quantity);
+  analyticsService.trackEvent({ event_type: 'add_to_cart', store_id: product.store_id, product_id: product.product_id, metadata: { quantity } });
       
       if (response.success) {
         toast.dismiss(loadingToast);
